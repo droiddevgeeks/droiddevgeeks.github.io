@@ -1,0 +1,17 @@
+# Site settings
+title: Kishan Kumar Maurya
+description: Android Engineer at OlaElectric & Technical writer at MindOrks & ProAndroidDev.
+# baseurl: "/particle" # the subpath of your site, e.g. /blog
+# url: "localhost:3000" # the base hostname & protocol for your site e.g. http://willianjusten.com.br
+
+# User settings
+username: Kishan Maurya
+user_description: Android Engineer with a experience in developing E-commerce, Cab Booking, Media, Health applications. Skilled in Kotlin, Android, Core Java, CI/CD, Jenkins, Algorithms and design patterns. Familiar with latest Android Architectures, Frameworks.
+user_title: Android Engineer
+email: kishankr.maurya@gmail.com
+twitter_username: KishankrMaurya
+github_username:  droiddevgeeks
+linkedin_username : kishan-maurya
+facebook_username : kishankr.maurya
+
+exclude: ['package.json', 'src' , 'node_modules']
