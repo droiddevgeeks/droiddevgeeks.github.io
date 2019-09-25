@@ -16,7 +16,7 @@ Worked on this app from August 2018 to April 2019. This is US Client
 Worked on this app from October 2017 to Febuary 2018.
 
 [Jio News](https://play.google.com/store/apps/details?id=com.jio.jionews&hl=en)
-Worked on this app from Febuary 2017 to September 2018.
+Worked on this app from Febuary 2017 to September 2017.
 
 [Jio XpressNews](https://play.google.com/store/apps/details?id=com.jio.media.jioxpressnews&hl=en)
 Worked on this app from June 2016 to January 2017.
