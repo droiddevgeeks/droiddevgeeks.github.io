@@ -2,16 +2,12 @@
 layout: post
 title:  "Companies"
 date:   2019-09-24 17:12:02 +0530
-categories: companies update
+categories: companies list
 ---
-I Kishan Kumar Maurya, an Android Developer having experience of 4.5 years in developing mobile application, thier support and maintainnace.
-I have develop around 8-9 mobile application. 
-Most of them are live on play store.
+[AppStreet](https://appstreet.io) Currently I am working as Software Development Engineer since June 2019.
 
-About my graduation, I did from HBTI, Kanpur in 2014 with specialization in IT. [HBTI](http://hbtu.ac.in)
+[Heady.io](https://heady.io) as Software Development Engineer from April 2018 to June 2019
 
-You can find the open source code at GitHub:
-[droiddevgeeks](https://github.com/droiddevgeeks)
+[Reliance Jio](https://www.jio.com) as Software Development Engineer from December 2015 to April 2018
 
-You can find the my technical article on Medium:
-[Kishankr.Maurya](https://medium.com/@kishankr.maurya)
+[Yatra Online](http://www.yatra.com) as Software Engineer from December 2014 to December 2015

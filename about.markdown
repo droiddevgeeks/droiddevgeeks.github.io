@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-I Kishan Kumar Maurya, an Android Developer having experience of 4.5 years in developing mobile application, thier support and maintainnace.
+I Kishan Kumar Maurya, an Android Developer having an experience of 4+ years in developing mobile application, thier support and maintainnace.
 I have develop around 8-9 mobile application. 
 Most of them are live on play store.
 
