@@ -2,12 +2,11 @@ title: Kishan Kumar Maurya
 email: kishankr.maurya@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Android Developer at AppStreet.io & Technical writer at MindOrks & ProAndroidDev.
-baseurl: "/info" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 github_username: droiddevgeeks
 linkedin_username : kishan-maurya
-stackoverflow_username : kishan-maurya
 facebook_username : kishankr.maurya
 
 # Build settings
