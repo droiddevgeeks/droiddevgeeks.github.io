@@ -1,4 +1,5 @@
 # droiddevgeeks.github.io
-This is my page. 
-It show my information. 
+This is my potfolio.
 My Professional links and sites.
+Used Jekyll Static website generator
+ 
