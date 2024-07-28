@@ -1,4 +1,17 @@
-{
-  "currentVersion": "20118",
-  "url": "https://docs.cashfree.com/docs/android-integration"
-}
+[
+  {
+    "currentVersion": "20118",
+    "url": "https://docs.cashfree.com/docs/android-changelog",
+    "platform": "Android"
+  },
+  {
+    "currentVersion": "20118",
+    "url": "https://docs.cashfree.com/docs/reactnative-changelog",
+    "platform": "WebStorm"
+  },
+  {
+    "currentVersion": "20118",
+    "url": "https://central.sonatype.com/artifact/com.cashfree.pg.java/cashfree_pg/versions",
+    "platform": "IntelliJ"
+  }
+]
