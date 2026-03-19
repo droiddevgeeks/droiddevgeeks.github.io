@@ -12,6 +12,17 @@
 
 .user-projects {
   margin: 20px auto;
+  .card {
+    overflow: hidden;
+    border-radius: 5px;
+    img {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    &:hover img {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+  }
   img {
     max-width: 100%;
     height: auto;
