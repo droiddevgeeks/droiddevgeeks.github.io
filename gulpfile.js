@@ -49,8 +49,7 @@ function compileSass() {
  * Copy fonts
  */
 function fonts() {
-  return gulp.src('src/fonts/**/*.{ttf,woff,woff2}')
-    .pipe(plumber())
+  return gulp.src('src/fonts/**/*.{ttf,woff,woff2}', { encoding: false })
     .pipe(gulp.dest('assets/fonts/'));
 }
 

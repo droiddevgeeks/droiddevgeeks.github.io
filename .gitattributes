@@ -1,0 +1,7 @@
+# Force binary treatment for font files — prevents git EOL conversion corrupting them
+*.ttf   binary
+*.otf   binary
+*.woff  binary
+*.woff2 binary
+*.eot   binary
+*.pdf   binary
