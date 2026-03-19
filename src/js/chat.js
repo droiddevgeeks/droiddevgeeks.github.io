@@ -49,7 +49,7 @@ var PROFILE = {
 
   projects: "Kishan's featured projects:\n1. Cashfree Payments — Mobile SDK (5,100+ merchants, 13.7M+ monthly transactions)\n2. Ola Electric — Scooter companion app with BLE (1M+ installs)\n3. Gojek GoTransport — Ride-hailing consumer & driver app\n4. Hibbett Sports — E-commerce & raffle app (Heady Technology)\n5. JioNews — Regional news app (Reliance Jio)",
 
-  education: "Kishan holds a B.Tech in Information Technology from Harcourt Butler Technical University, Kanpur (U.P), 2010–2014.",
+  education: "Kishan's educational background:\n• School: Rani Laxmi Bai School — 2009, 85%\n• B.Tech in Information Technology — Harcourt Butler Technical University, Kanpur (U.P), 2010–2014",
 
   contact: "You can reach Kishan at:<br>• Email: <a href=\"mailto:kishankr.maurya@gmail.com\" target=\"_blank\">kishankr.maurya@gmail.com</a><br>• Phone: +91-8433719326<br>• LinkedIn: <a href=\"https://www.linkedin.com/in/kishan-maurya\" target=\"_blank\">linkedin.com/in/kishan-maurya</a><br>• GitHub: <a href=\"https://github.com/droiddevgeeks\" target=\"_blank\">github.com/droiddevgeeks</a><br>• Location: Bangalore, India",
 
@@ -117,10 +117,45 @@ var INTENTS = [
   { keywords: ['payment', 'transaction', 'cashfree sdk'], answer: 'payment' },
   { keywords: ['observability', 'grafana', 'dashboard', 'monitoring', 'telemetry', 'analytics'], answer: 'observability' },
   { keywords: ['ai', 'copilot', 'chatgpt', 'claude', 'gemini', 'artificial intelligence'], answer: 'ai' },
-  { keywords: ['education', 'degree', 'college', 'university', 'btech', 'b.tech', 'study', 'academic'], answer: 'education' }
+  { keywords: ['education', 'degree', 'college', 'university', 'btech', 'b.tech', 'study', 'academic', 'school', 'hbtu', 'kanpur', '10th', '12th', 'qualification'], answer: 'education' }
 ];
 
 var STOP_WORDS = ['the','and','for','are','but','not','you','all','can','was','one','our','out','get','has','him','his','how','its','may','now','see','who','did','what','when','with','from','this','that','they','have','will','been','just','tell','more','your','does','give','some','any','know','about','tell','please','want'];
+
+function editDistance(a, b) {
+  if (Math.abs(a.length - b.length) > 3) return 99;
+  var m = a.length, n = b.length;
+  var dp = [];
+  for (var i = 0; i <= m; i++) {
+    dp[i] = [i];
+    for (var j = 1; j <= n; j++) {
+      dp[i][j] = i === 0 ? j :
+        (a[i-1] === b[j-1] ? dp[i-1][j-1] :
+          1 + Math.min(dp[i-1][j], dp[i][j-1], dp[i-1][j-1]));
+    }
+  }
+  return dp[m][n];
+}
+
+function fuzzyMatchIntent(lower) {
+  var words = lower.split(/\s+/);
+  for (var i = 0; i < INTENTS.length; i++) {
+    var intent = INTENTS[i];
+    for (var j = 0; j < intent.keywords.length; j++) {
+      var kw = intent.keywords[j];
+      if (kw.indexOf(' ') !== -1) continue; // skip multi-word keywords
+      var maxDist = kw.length <= 5 ? 1 : 2;
+      for (var k = 0; k < words.length; k++) {
+        var w = words[k];
+        if (w.length < 4) continue; // skip short words to avoid false positives
+        if (editDistance(w, kw) <= maxDist) {
+          return PROFILE[intent.answer];
+        }
+      }
+    }
+  }
+  return null;
+}
 
 function searchProfile(lower) {
   var words = lower.split(/\s+/).filter(function(w) {
@@ -154,7 +189,10 @@ function matchIntent(message) {
       }
     }
   }
-  // Second pass: score all PROFILE entries by word overlap
+  // Second pass: fuzzy keyword match (handles typos)
+  var fuzzy = fuzzyMatchIntent(lower);
+  if (fuzzy) return fuzzy;
+  // Third pass: score all PROFILE entries by word overlap
   return searchProfile(lower);
 }
 
