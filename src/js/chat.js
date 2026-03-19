@@ -117,6 +117,30 @@ var INTENTS = [
   { keywords: ['education', 'degree', 'college', 'university', 'btech', 'b.tech', 'study', 'academic'], answer: 'education' }
 ];
 
+var STOP_WORDS = ['the','and','for','are','but','not','you','all','can','was','one','our','out','get','has','him','his','how','its','may','now','see','who','did','what','when','with','from','this','that','they','have','will','been','just','tell','more','your','does','give','some','any','know','about','tell','please','want'];
+
+function searchProfile(lower) {
+  var words = lower.split(/\s+/).filter(function(w) {
+    return w.length > 2 && STOP_WORDS.indexOf(w) === -1;
+  });
+  if (words.length === 0) return PROFILE.fallback;
+
+  var bestKey = null;
+  var bestScore = 0;
+  var keys = Object.keys(PROFILE);
+  for (var i = 0; i < keys.length; i++) {
+    var key = keys[i];
+    if (key === 'fallback' || key === 'greeting') continue;
+    var val = PROFILE[key].toLowerCase();
+    var score = 0;
+    for (var j = 0; j < words.length; j++) {
+      if (val.indexOf(words[j]) !== -1) score++;
+    }
+    if (score > bestScore) { bestScore = score; bestKey = key; }
+  }
+  return bestScore > 0 ? PROFILE[bestKey] : PROFILE.fallback;
+}
+
 function matchIntent(message) {
   var lower = message.toLowerCase();
   for (var i = 0; i < INTENTS.length; i++) {
@@ -127,7 +151,8 @@ function matchIntent(message) {
       }
     }
   }
-  return PROFILE.fallback;
+  // Second pass: score all PROFILE entries by word overlap
+  return searchProfile(lower);
 }
 
 function ChatWidget() {
