@@ -1,132 +1,249 @@
 #particles-js {
-  background: $main;
+  background: #1c2b3a;
   display: flex;
-  vertical-align: bottom;
   width: 100%;
   min-height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+
   .particles-js-canvas-el {
-    width:100% !important;
-    height:100vh !important;
+    width: 100% !important;
+    height: 100vh !important;
   }
 }
 
+// ── Hero centre block ────────────────────────────────────────
 .header {
   z-index: 1;
   text-align: center;
-  color:#FFF;
+  color: #fff;
   position: absolute;
   top: 50%;
   left: 50%;
-  margin: 0 auto;
-  -webkit-transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 780px;
   transform: translate(-50%, -50%);
+
   .site-title {
-    font-size: 50px;
     display: block;
+    font-size: 48px;
+    font-weight: 800;
     line-height: 1;
-    color: #FFF;
-    @media only screen and (min-width:$cut){
-      margin: 0;
-      font-size: 100px;
+    color: #fff;
+    letter-spacing: -0.5px;
+
+    @media only screen and (min-width: $cut) {
+      font-size: 88px;
+      letter-spacing: -1px;
     }
   }
+
   .site-description {
-    font-size: 20px;
     display: block;
-    line-height: 1;
-    color: #FFF;
-    margin-top: 10px;
-    @media only screen and (min-width:$cut){
-      font-size: 40px;
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.78);
+    margin-top: 12px;
+    line-height: 1.5;
+    letter-spacing: 0.3px;
+
+    @media only screen and (min-width: $cut) {
+      font-size: 18px;
     }
   }
 }
 
-.header-links {
-  margin: 10px;
-  .link {
-    color: #FFF;
-    text-decoration: none;
-    font-size: 15px;
-    margin: 10px;
-    @media only screen and (min-width:$cut){
+// ── Stats bar ────────────────────────────────────────────────
+.header-stats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  margin: 22px auto 18px;
+  flex-wrap: wrap;
+
+  .stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 18px;
+
+    @media only screen and (min-width: $cut) {
+      padding: 0 28px;
+    }
+
+    .stat-num {
       font-size: 20px;
+      font-weight: 800;
+      color: #fff;
+      line-height: 1;
+
+      @media only screen and (min-width: $cut) {
+        font-size: 26px;
+      }
+    }
+
+    .stat-label {
+      font-size: 9px;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.6);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-top: 4px;
     }
   }
-  .resume-link {
-    border: 1px solid #FFF;
-    border-radius: 10px;
-    padding: 4px 12px;
-    transition: color 0.3s ease-out, background-color 0.3s ease-out;
-    &:hover {
-      background-color: #FFF;
-      color: $main;
-    }
+
+  .stat-divider {
+    width: 1px;
+    height: 32px;
+    background: rgba(255, 255, 255, 0.25);
+    flex-shrink: 0;
   }
 }
 
+// ── Social icons ─────────────────────────────────────────────
 .header-icons {
   display: flex;
   justify-content: center;
-  text-align: center;
-  .icon {
-    text-align: center;
-    color: #FFF;
-    width: 20px;
-    height: 20px;
-    font-size: 20px;
-    padding: 10px;
-    margin: 5px;
+  gap: 4px;
+  margin-bottom: 16px;
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
     border-radius: 50%;
-    border: 2px solid #FFF;
-    transition: all .7s;
+    transition: background 0.25s ease;
+
     &:hover {
-      color: $main;
-      background: #FFF;
+      background: rgba(255, 255, 255, 0.15);
     }
-    &:active {
-      color: $main;
-      background: #FFF;
-    }
-    @media only screen and (min-width:$cut) {
-      width: 35px;
-      height: 35px;
-      font-size: 35px;
+  }
+
+  .icon {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 18px;
+
+    @media only screen and (min-width: $cut) {
+      font-size: 22px;
     }
   }
 }
 
+// ── Nav links ────────────────────────────────────────────────
+.header-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+
+  .link {
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 6px 14px;
+    border-radius: 6px;
+    transition: background 0.2s ease, color 0.2s ease;
+    letter-spacing: 0.3px;
+
+    @media only screen and (min-width: $cut) {
+      font-size: 14px;
+    }
+
+    &:hover {
+      color: #fff;
+      background: rgba(255, 255, 255, 0.12);
+    }
+  }
+
+  .resume-link {
+    color: #fff;
+    border: 1.5px solid rgba(255, 255, 255, 0.7);
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+
+    &:hover {
+      background: #fff;
+      border-color: #fff;
+      color: $main;
+    }
+  }
+}
+
+// ── Scroll-down chevron ──────────────────────────────────────
 .down {
-  color: #FFF;
+  color: #fff;
   position: absolute;
-  bottom: 25px;
+  bottom: 28px;
   width: 100%;
-  margin: 0 auto;
   display: block;
   text-align: center;
-  font-size: 30px;
   cursor: pointer;
+
   .icon {
-      position: absolute;
-      -webkit-transform-style: preserve-3d;
-      transform-style: preserve-3d;
-      top: 50%;
-      left: 50%;
-      -webkit-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%);
-      width: 100px;
-      height: 100px;
-      fill: #fff;
-      -webkit-animation: pulse 1.3s infinite;
-      animation: pulse 1.3s infinite;
-      &:hover {
-        color: $sec;
-      }
-      &:active {
-        color: $sec;
-      }
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    animation: pulse 1.3s infinite;
+
+    &:hover, &:active { color: $sec; }
   }
+}
+
+// ── Section heading accent ────────────────────────────────────
+.user-details {
+  text-align: left;
+  margin: 0 0 32px;
+
+  h1 {
+    display: inline-block;
+    position: relative;
+    color: #fff;
+    font-size: 1.9rem;
+    font-weight: 800;
+    margin: 0;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 48px;
+      height: 3px;
+      background: $purple;
+      border-radius: 2px;
+      margin: 10px 0 0;
+    }
+  }
+
+  p {
+    max-width: 100%;
+    margin: 10px 0 0;
+    color: $sec;
+    font-size: 13.5px;
+    line-height: 1.6;
+  }
+}
+
+.resume-link-about {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 8px 20px;
+  background: $main;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s ease;
+
+  &:hover { background: $purple; }
 }

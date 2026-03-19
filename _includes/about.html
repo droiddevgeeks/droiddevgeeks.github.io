@@ -1,25 +1,89 @@
- <div class="user-details">
-  <h1> My Expertise </h1>
-  <p> {{site.user_description}} </p>
+<div class="user-details">
+  <h1>My Expertise</h1>
+  <p>{{site.user_description}}</p>
 </div>
-  <div class="user">
-    <div class="tech">
-      <h2>Platform</h2>
-      <i class="devicon-android-plain-wordmark colored"></i>
+
+<div class="expertise-grid">
+
+  <div class="expertise-card" style="--accent: #1a222c">
+    <div class="ec-icon-row">
+      <i class="devicon-android-plain colored"></i>
       <i class="devicon-react-original colored"></i>
-      <p>9+ years building Android apps (Java/Kotlin), Flutter, and React Native. Expert in SDK development powering 5,100+ merchants and 13.7M+ monthly transactions at Cashfree Payments.</p>
     </div>
-    <div class="tech">
-      <h2>Language</h2>
+    <h3>Mobile Development</h3>
+    <p class="ec-desc">9+ years building Android apps, Flutter & React Native SDKs powering 5,100+ merchants and 13.7M+ monthly transactions at Cashfree Payments.</p>
+    <div class="ec-skills">
+      <span>Android</span><span>Flutter</span><span>React Native</span>
+      <span>Cordova</span><span>Capacitor</span><span>Jetpack Compose</span>
+    </div>
+  </div>
+
+  <div class="expertise-card" style="--accent: #54516A">
+    <div class="ec-icon-row">
       <i class="devicon-java-plain"></i>
       <i class="devicon-javascript-plain colored"></i>
-      <p>Proficient in Java, Kotlin for Android and Flutter/Dart for cross-platform. 2+ years of backend with TypeScript, NestJS, and Node.js building REST APIs and microservices.</p>
+      <i class="devicon-typescript-plain colored"></i>
     </div>
-    <div class="tech">
-      <h2>Tools</h2>
-      <i class="devicon-amazonwebservices-original colored"></i>
-      <i class="devicon-git-plain colored"></i>
+    <h3>Languages</h3>
+    <p class="ec-desc">Kotlin & Java for Android, Dart for Flutter, TypeScript & JavaScript for backend services and cross-platform development.</p>
+    <div class="ec-skills">
+      <span>Kotlin</span><span>Java</span><span>Dart</span>
+      <span>TypeScript</span><span>JavaScript</span>
+    </div>
+  </div>
+
+  <div class="expertise-card" style="--accent: #2563eb">
+    <div class="ec-icon-row">
+      <i class="devicon-nodejs-plain colored"></i>
+      <i class="devicon-mongodb-plain colored"></i>
+      <i class="devicon-mysql-plain colored"></i>
+    </div>
+    <h3>Backend & APIs</h3>
+    <p class="ec-desc">2+ years building scalable server-side apps, microservices and REST APIs with NestJS and Node.js at Cashfree Payments.</p>
+    <div class="ec-skills">
+      <span>NestJS</span><span>Node.js</span><span>REST APIs</span>
+      <span>MySQL</span><span>MongoDB</span><span>Amazon Redshift</span>
+    </div>
+  </div>
+
+  <div class="expertise-card" style="--accent: #059669">
+    <div class="ec-icon-row">
+      <i class="devicon-github-original"></i>
       <i class="devicon-gradle-plain colored"></i>
-      <p>Android Studio, Gradle, VS Code, Git, Jira, Confluence, GitHub Actions, Bitbucket CI/CD, Firebase, Crashlytics, MySQL, MongoDB, Amazon Redshift, CleverTap, Retool.</p>
+      <i class="devicon-bitbucket-original colored"></i>
     </div>
+    <h3>DevOps & CI/CD</h3>
+    <p class="ec-desc">Architected fully automated SDK release pipeline — cut release time from ~6 hours to under 30 minutes using GitHub Actions & Gradle.</p>
+    <div class="ec-skills">
+      <span>GitHub Actions</span><span>Bitbucket Pipelines</span>
+      <span>Gradle</span><span>Maven Central</span><span>Bitrise</span>
+    </div>
+  </div>
+
+  <div class="expertise-card" style="--accent: #d97706">
+    <div class="ec-icon-row">
+      <i class="devicon-git-plain colored"></i>
+      <i class="devicon-visualstudio-plain colored"></i>
+    </div>
+    <h3>Architecture & Design</h3>
+    <p class="ec-desc">Designs scalable mobile systems using MVVM & MVP patterns, produces HLD/LLD documents and leads architecture reviews.</p>
+    <div class="ec-skills">
+      <span>MVVM</span><span>MVP</span><span>System Design</span>
+      <span>HLD / LLD</span><span>SDK Architecture</span>
+    </div>
+  </div>
+
+  <div class="expertise-card" style="--accent: #dc2626">
+    <div class="ec-icon-row">
+      <i class="devicon-amazonwebservices-original colored"></i>
+      <i class="devicon-confluence-original colored"></i>
+    </div>
+    <h3>Analytics & Observability</h3>
+    <p class="ec-desc">Built SDK observability framework with Grafana dashboards. Firebase, Crashlytics, CleverTap for product analytics and crash monitoring.</p>
+    <div class="ec-skills">
+      <span>Firebase</span><span>Crashlytics</span><span>Grafana</span>
+      <span>CleverTap</span><span>Retool</span>
+    </div>
+  </div>
+
 </div>
