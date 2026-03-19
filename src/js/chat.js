@@ -39,7 +39,7 @@ var PROFILE = {
 
   reactnative: "Kishan builds and maintains React Native SDK wrappers at Cashfree Payments — used by ~2,500 merchant apps in production.",
 
-  skills: "Kishan's skill set:\n• Mobile: Android (Java/Kotlin), Flutter, React Native, Jetpack Compose\n• Backend: NestJS, Node.js, TypeScript, REST APIs\n• Architecture: MVVM, MVP, HLD, LLD, System Design\n• Databases: MySQL, MongoDB, Amazon Redshift\n• Analytics: Firebase, Crashlytics, CleverTap\n• CI/CD: GitHub Actions, Bitbucket Pipelines, Gradle\n• AI Tools: GitHub Copilot, ChatGPT for code review\n• Tools: Android Studio, VS Code, Jira, Confluence, Retool",
+  skills: "Kishan's skill set:\n• Mobile: Android (Java/Kotlin), Flutter, React Native, Jetpack Compose\n• Backend: NestJS, Node.js, TypeScript, REST APIs\n• Architecture: MVVM, MVP, HLD, LLD, System Design\n• Databases: MySQL, MongoDB, Amazon Redshift\n• Analytics: Firebase, Crashlytics, CleverTap\n• CI/CD: GitHub Actions, Bitbucket Pipelines, Gradle\n• AI Tools: GitHub Copilot, ChatGPT, Claude for code review\n• Tools: Android Studio, VS Code, Jira, Confluence, Retool",
 
   architecture: "Kishan designs systems using MVVM and MVP patterns, and produces High-Level Design (HLD) and Low-Level Design (LLD) documents. He leads architecture reviews and performance-focused engineering standards.",
 
@@ -54,6 +54,8 @@ var PROFILE = {
   contact: "You can reach Kishan at:<br>• Email: <a href=\"mailto:kishankr.maurya@gmail.com\" target=\"_blank\">kishankr.maurya@gmail.com</a><br>• Phone: +91-8433719326<br>• LinkedIn: <a href=\"https://www.linkedin.com/in/kishan-maurya\" target=\"_blank\">linkedin.com/in/kishan-maurya</a><br>• GitHub: <a href=\"https://github.com/droiddevgeeks\" target=\"_blank\">github.com/droiddevgeeks</a><br>• Location: Bangalore, India",
 
   email: "You can email Kishan at <a href=\"mailto:kishankr.maurya@gmail.com\" target=\"_blank\">kishankr.maurya@gmail.com</a>",
+
+  phone: "You can call or WhatsApp Kishan at <a href=\"tel:+918433719326\">+91-8433719326</a>",
 
   linkedin: "Kishan's LinkedIn profile: <a href=\"https://www.linkedin.com/in/kishan-maurya\" target=\"_blank\">linkedin.com/in/kishan-maurya</a>",
 
@@ -73,7 +75,7 @@ var PROFILE = {
 
   observability: "Kishan architected an end-to-end SDK observability framework: instrumentation → ingestion → Grafana dashboards. It enables version-level traffic intelligence and proactive production monitoring across all Cashfree Mobile SDKs.",
 
-  ai: "Kishan uses AI tools including GitHub Copilot and ChatGPT plugins for code review and test case generation to speed up development cycles and improve code quality.",
+  ai: "Kishan uses AI tools including GitHub Copilot, ChatGPT, and Claude for code review, test case generation, and accelerating development cycles to improve code quality.",
 
   fallback: "I'm not sure about that. Try asking about Kishan's experience, skills, projects, education, current company, or how to contact him!"
 };
@@ -104,6 +106,7 @@ var INTENTS = [
   { keywords: ['project', 'work', 'built', 'portfolio', 'product'], answer: 'projects' },
   { keywords: ['contact', 'reach', 'get in touch', 'connect'], answer: 'contact' },
   { keywords: ['email', 'mail', 'gmail'], answer: 'email' },
+  { keywords: ['phone', 'mobile', 'number', 'call', 'whatsapp', 'contact number'], answer: 'phone' },
   { keywords: ['linkedin'], answer: 'linkedin' },
   { keywords: ['github', 'code', 'repo'], answer: 'github' },
   { keywords: ['blog', 'article', 'write', 'medium', 'mindorks', 'proandr'], answer: 'blog' },
@@ -113,7 +116,7 @@ var INTENTS = [
   { keywords: ['ble', 'bluetooth', 'lock', 'unlock', 'proximity'], answer: 'ble' },
   { keywords: ['payment', 'transaction', 'cashfree sdk'], answer: 'payment' },
   { keywords: ['observability', 'grafana', 'dashboard', 'monitoring', 'telemetry', 'analytics'], answer: 'observability' },
-  { keywords: ['ai', 'copilot', 'chatgpt', 'gemini', 'artificial intelligence'], answer: 'ai' },
+  { keywords: ['ai', 'copilot', 'chatgpt', 'claude', 'gemini', 'artificial intelligence'], answer: 'ai' },
   { keywords: ['education', 'degree', 'college', 'university', 'btech', 'b.tech', 'study', 'academic'], answer: 'education' }
 ];
 
